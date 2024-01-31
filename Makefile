@@ -7,3 +7,9 @@ save:
 	git commit -m "$(DESCRIPTION)"
 	git push
 
+pull:
+	git stash
+	git pull
+	git stash pop
+
+sync: pull
