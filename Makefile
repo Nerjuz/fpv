@@ -1,6 +1,6 @@
 DESCRIPTION ?= $(shell bash -c 'read -p "Enter description: " description; echo $$description')
 
-save:
+save: pull
 	@clear
 	git status
 	git add . 
@@ -8,6 +8,7 @@ save:
 	git push
 
 pull:
+	@clear
 	git stash
 	git pull
 	git stash pop
