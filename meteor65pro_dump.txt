@@ -242,8 +242,8 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
 feature RX_SERIAL
+feature TELEMETRY
 feature OSD
-feature AIRMODE
 feature ANTI_GRAVITY
 feature DYNAMIC_FILTER
 
@@ -392,8 +392,8 @@ aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
 aux 3 13 1 1700 2100 0 0
-aux 4 35 4 1700 2100 0 0
-aux 5 0 0 900 900 0 0
+aux 4 28 2 900 1700 0 0
+aux 5 35 4 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -519,7 +519,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -12,0,14,1
+set acc_calibration = 53,60,23,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -542,7 +542,7 @@ set baro_cf_vel = 985
 set mid_rc = 1500
 set min_check = 1050
 set max_check = 2000
-set rssi_channel = 12
+set rssi_channel = 0
 set rssi_src_frame_errors = OFF
 set rssi_scale = 100
 set rssi_offset = 0
@@ -581,7 +581,7 @@ set adc_tempsensor_calibration30 = 0
 set adc_tempsensor_calibration110 = 0
 set input_filtering_mode = OFF
 set blackbox_p_ratio = 48
-set blackbox_device = SPIFLASH
+set blackbox_device = SERIAL
 set blackbox_record_acc = ON
 set blackbox_mode = NORMAL
 set min_throttle = 1070
@@ -604,7 +604,7 @@ set failsafe_off_delay = 10
 set failsafe_throttle = 1000
 set failsafe_switch_mode = STAGE1
 set failsafe_throttle_low_delay = 100
-set failsafe_procedure = DROP
+set failsafe_procedure = AUTO-LAND
 set failsafe_recovery_delay = 20
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
@@ -614,8 +614,8 @@ set gimbal_mode = NORMAL
 set bat_capacity = 0
 set vbat_max_cell_voltage = 435
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 330
-set vbat_warning_cell_voltage = 350
+set vbat_min_cell_voltage = 325
+set vbat_warning_cell_voltage = 330
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -786,12 +786,12 @@ set osd_ah_max_rol = 40
 set osd_ah_invert = OFF
 set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
-set osd_tim1 = 2560
+set osd_tim1 = 2561
 set osd_tim2 = 2561
 set osd_vbat_pos = 2433
-set osd_rssi_pos = 2305
+set osd_rssi_pos = 2369
 set osd_link_quality_pos = 321
-set osd_rssi_dbm_pos = 289
+set osd_rssi_dbm_pos = 2401
 set osd_tim_1_pos = 386
 set osd_tim_2_pos = 2454
 set osd_remaining_time_estimate_pos = 33
@@ -799,7 +799,7 @@ set osd_flymode_pos = 2422
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 2390
-set osd_vtx_channel_pos = 32
+set osd_vtx_channel_pos = 353
 set osd_crosshairs_pos = 2286
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 2159
@@ -845,13 +845,13 @@ set osd_stick_overlay_radio_mode = 2
 set osd_rate_profile_name_pos = 234
 set osd_pid_profile_name_pos = 234
 set osd_profile_name_pos = 234
-set osd_rcchannels_pos = 234
+set osd_rcchannels_pos = 224
 set osd_camera_frame_pos = 35
 set osd_efficiency_pos = 234
 set osd_stat_rtc_date_time = OFF
-set osd_stat_tim_1 = OFF
+set osd_stat_tim_1 = ON
 set osd_stat_tim_2 = ON
-set osd_stat_max_spd = ON
+set osd_stat_max_spd = OFF
 set osd_stat_max_dist = OFF
 set osd_stat_min_batt = ON
 set osd_stat_endbatt = OFF
@@ -860,18 +860,18 @@ set osd_stat_min_rssi = ON
 set osd_stat_max_curr = ON
 set osd_stat_used_mah = ON
 set osd_stat_max_alt = OFF
-set osd_stat_bbox = ON
-set osd_stat_bb_no = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = OFF
 set osd_stat_max_esc_temp = OFF
 set osd_stat_max_esc_rpm = OFF
-set osd_stat_min_link_quality = OFF
+set osd_stat_min_link_quality = ON
 set osd_stat_flight_dist = OFF
 set osd_stat_max_fft = OFF
 set osd_stat_total_flights = OFF
-set osd_stat_total_time = OFF
+set osd_stat_total_time = ON
 set osd_stat_total_dist = OFF
-set osd_stat_min_rssi_dbm = OFF
+set osd_stat_min_rssi_dbm = ON
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -890,10 +890,10 @@ set pwr_on_arm_grace = 5
 set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 3
+set vtx_channel = 8
 set vtx_power = 1
 set vtx_low_power_disarm = ON
-set vtx_freq = 5732
+set vtx_freq = 5917
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
