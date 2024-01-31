@@ -1,7 +1,9 @@
+DESCRIPTION ?= $(shell bash -c 'read -p "Enter description: " description; echo $$description')
+
 save:
+	@clear
 	git status
-	@read -p "Enter description: " description; 
-	git add .
-	git commit -m "$description"
+	git add . 
+	git commit -m "$(DESCRIPTION)"
 	git push
 
