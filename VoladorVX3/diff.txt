@@ -1,4 +1,5 @@
-diff all
+defaults nosave
+
 
 # version
 # Betaflight / STM32F405 (S405) 4.4.3 Nov 14 2023 / 16:32:58 (738127e7e) MSP API: 1.45
@@ -17,13 +18,16 @@ mcu_id 0025003d3033470a38383134
 signature 
 
 # feature
+feature -TELEMETRY
 feature -AIRMODE
+feature GPS
 
 # serial
 serial 0 131073 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
+serial 5 2 115200 115200 0 115200
 
 # beeper
 beeper -GYRO_CALIBRATED
@@ -75,7 +79,7 @@ set dyn_notch_q = 400
 set dyn_notch_max_hz = 800
 set gyro_lpf1_dyn_min_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = 44,-23,-8,1
+set acc_calibration = 86,6,-10,1
 set motor_pwm_protocol = DSHOT600
 set failsafe_throttle = 1160
 set failsafe_procedure = AUTO-LAND
@@ -241,5 +245,3 @@ rateprofile 3
 rateprofile 0
 
 # save configuration
-save
-# 
