@@ -1,9 +1,8 @@
 # diff all defaults
 
 # version
-# Betaflight / STM32F405 (S405) 4.4.3 Nov 14 2023 / 16:32:58 (738127e7e) MSP API: 1.45
-
-# config: YES
+# Betaflight / STM32F405 (S405) 4.5.0 Jan 27 2024 / 13:43:07 (f1cbd83f0) MSP API: 1.46
+# config rev: 4dbb0a0
 
 # start the command batch
 batch start
@@ -16,12 +15,12 @@ manufacturer_id SPBE
 mcu_id 0025003d3033470a38383134
 signature 
 #feature -GPS
+#feature -TELEMETRY
 
 # feature
-feature -TELEMETRY
 feature -AIRMODE
 feature GPS
-#feature TELEMETRY
+feature TELEMETRY
 #feature AIRMODE
 
 # serial
@@ -96,15 +95,15 @@ aux 1 1 2 1700 2100 0 0
 #aux 2 0 0 900 900 0 0
 aux 2 2 2 1300 1700 0 0
 #aux 3 0 0 900 900 0 0
-aux 3 13 1 1700 2100 0 0
+aux 3 27 5 1700 2100 0 0
 #aux 4 0 0 900 900 0 0
-aux 4 28 4 900 1275 0 0
+aux 4 13 1 1700 2100 0 0
 #aux 5 0 0 900 900 0 0
-aux 5 35 4 1700 2100 0 0
+aux 5 28 2 900 1700 0 0
 #aux 6 0 0 900 900 0 0
-aux 6 36 3 1700 2100 0 0
+aux 6 35 4 1700 2100 0 0
 #aux 7 0 0 900 900 0 0
-aux 7 52 5 1700 2100 0 0
+aux 7 35 3 1700 2100 0 0
 
 # rxfail
 #rxfail 3 a 875
@@ -128,19 +127,19 @@ set gyro_lpf1_dyn_min_hz = 0
 #set acc_lpf_hz = 25
 set acc_lpf_hz = 10
 #set acc_calibration = 0,0,0,0
-set acc_calibration = 86,6,-10,1
-#set motor_pwm_protocol = DISABLED
-set motor_pwm_protocol = DSHOT600
+set acc_calibration = 22,-18,-8,1
 #set failsafe_throttle = 1000
 set failsafe_throttle = 1160
 #set failsafe_procedure = DROP
-set failsafe_procedure = AUTO-LAND
+set failsafe_procedure = GPS-RESCUE
 #set vbat_max_cell_voltage = 430
 set vbat_max_cell_voltage = 440
 #set vbat_scale = 110
 set vbat_scale = 111
 #set small_angle = 25
 set small_angle = 180
+#set mag_declination = 0
+set mag_declination = 900
 #set gps_sbas_mode = NONE
 set gps_sbas_mode = EGNOS
 #set gps_ublox_use_galileo = OFF
