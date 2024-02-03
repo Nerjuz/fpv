@@ -13,4 +13,4 @@ pull:
 	git pull
 	git stash pop
 
-sync: pull
+sync: pull save
