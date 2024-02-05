@@ -67,7 +67,7 @@ aux 6 35 4 1700 2100 0 0
 aux 7 35 3 1700 2100 0 0
 
 # rxfail
-rxfail 3 s 1200
+rxfail 3 s 1250
 rxfail 6 s 1500
 
 # master
@@ -84,14 +84,13 @@ set failsafe_procedure = GPS-RESCUE
 set vbat_max_cell_voltage = 440
 set vbat_scale = 111
 set small_angle = 180
-set mag_declination = 900
 set gps_sbas_mode = EGNOS
 set gps_ublox_use_galileo = ON
 set gps_set_home_point_once = ON
 set gps_rescue_alt_mode = CURRENT_ALT
 set gps_rescue_max_angle = 40
 set gps_rescue_throttle_max = 1600
-set gps_rescue_throttle_hover = 1200
+set gps_rescue_throttle_hover = 1250
 set gps_rescue_min_sats = 5
 set gps_rescue_allow_arming_without_fix = ON
 set pid_process_denom = 2
@@ -123,13 +122,13 @@ set osd_motor_diag_pos = 341
 set osd_craft_name_pos = 37
 set osd_pilot_name_pos = 5
 set osd_gps_speed_pos = 2126
-set osd_gps_lon_pos = 3105
-set osd_gps_lat_pos = 2091
+set osd_gps_lon_pos = 2626
+set osd_gps_lat_pos = 2658
 set osd_gps_sats_pos = 3138
-set osd_home_dir_pos = 2169
+set osd_home_dir_pos = 2170
 set osd_home_dist_pos = 2132
 set osd_flight_dist_pos = 341
-set osd_compass_bar_pos = 2103
+set osd_compass_bar_pos = 2102
 set osd_altitude_pos = 2138
 set osd_pid_roll_pos = 341
 set osd_pid_pitch_pos = 341
@@ -149,9 +148,9 @@ set osd_ready_mode_pos = 341
 set osd_esc_tmp_pos = 111
 set osd_esc_rpm_pos = 11
 set osd_esc_rpm_freq_pos = 341
-set osd_rtc_date_time_pos = 2063
+set osd_rtc_date_time_pos = 2064
 set osd_adjustment_range_pos = 341
-set osd_flip_arrow_pos = 2425
+set osd_flip_arrow_pos = 2426
 set osd_core_temp_pos = 341
 set osd_log_status_pos = 341
 set osd_stick_overlay_left_pos = 341
