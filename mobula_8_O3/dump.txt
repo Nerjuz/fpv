@@ -82,10 +82,10 @@ resource INVERTER 10 NONE
 resource INVERTER 11 NONE
 resource INVERTER 12 NONE
 resource I2C_SCL 1 NONE
-resource I2C_SCL 2 NONE
+resource I2C_SCL 2 B10
 resource I2C_SCL 3 NONE
 resource I2C_SDA 1 NONE
-resource I2C_SDA 2 NONE
+resource I2C_SDA 2 B11
 resource I2C_SDA 3 NONE
 resource LED 1 B05
 resource LED 2 NONE
@@ -839,10 +839,10 @@ set osd_rssi_dbm_pos = 2480
 set osd_tim_1_pos = 504
 set osd_tim_2_pos = 2512
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 2097
+set osd_flymode_pos = 2098
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 2090
+set osd_throttle_pos = 2087
 set osd_vtx_channel_pos = 234
 set osd_crosshairs_pos = 2318
 set osd_ah_sbar_pos = 206
@@ -860,7 +860,7 @@ set osd_home_dir_pos = 234
 set osd_home_dist_pos = 234
 set osd_flight_dist_pos = 234
 set osd_compass_bar_pos = 234
-set osd_altitude_pos = 234
+set osd_altitude_pos = 18476
 set osd_pid_roll_pos = 234
 set osd_pid_pitch_pos = 234
 set osd_pid_yaw_pos = 234
