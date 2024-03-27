@@ -1,0 +1,318 @@
+# diff all defaults
+
+# version
+# Betaflight / STM32F405 (S405) 4.3.2 Nov 28 2022 / 07:26:30 (60c9521) MSP API: 1.44
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFLIGHTF4
+manufacturer_id FPVM
+mcu_id 002e00315131501020333341
+signature 
+
+# name: Mobula8 O3
+
+# resources
+#resource I2C_SCL 2 NONE
+resource I2C_SCL 2 B10
+#resource I2C_SDA 2 NONE
+resource I2C_SDA 2 B11
+#feature -RX_SERIAL
+#feature -TELEMETRY
+
+# feature
+feature -RX_PARALLEL_PWM
+feature -AIRMODE
+feature RX_SERIAL
+feature TELEMETRY
+#feature RX_PARALLEL_PWM
+#feature AIRMODE
+
+# serial
+#serial 0 0 115200 57600 0 115200
+serial 0 1 115200 57600 0 115200
+#serial 1 0 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+#beeper GYRO_CALIBRATED
+
+# beeper
+beeper -GYRO_CALIBRATED
+#beeper DISARMING
+beeper -DISARMING
+#beeper ARMING
+beeper -ARMING
+#beeper ARMING_GPS_FIX
+beeper -ARMING_GPS_FIX
+#beeper ARMING_GPS_NO_FIX
+beeper -ARMING_GPS_NO_FIX
+#beeper BAT_CRIT_LOW
+beeper -BAT_CRIT_LOW
+#beeper BAT_LOW
+beeper -BAT_LOW
+#beeper GPS_STATUS
+beeper -GPS_STATUS
+#beeper ACC_CALIBRATION
+beeper -ACC_CALIBRATION
+#beeper ACC_CALIBRATION_FAIL
+beeper -ACC_CALIBRATION_FAIL
+#beeper DISARM_REPEAT
+beeper -DISARM_REPEAT
+#beeper ARMED
+beeper -ARMED
+#beeper SYSTEM_INIT
+beeper -SYSTEM_INIT
+#beeper ON_USB
+beeper -ON_USB
+#beeper BLACKBOX_ERASE
+beeper -BLACKBOX_ERASE
+#beeper CRASH_FLIP
+beeper -CRASH_FLIP
+#beeper CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_OPEN
+#beeper CAM_CONNECTION_CLOSE
+beeper -CAM_CONNECTION_CLOSE
+#beeper RC_SMOOTHING_INIT_FAIL
+beeper -RC_SMOOTHING_INIT_FAIL
+#beacon -RX_LOST
+
+# beacon
+beacon RX_LOST
+#beacon -RX_SET
+beacon RX_SET
+
+# aux
+#aux 0 0 0 900 900 0 0
+aux 0 0 0 1800 2100 0 0
+#aux 1 0 0 900 900 0 0
+aux 1 1 2 1800 2100 0 0
+#aux 2 0 0 900 900 0 0
+aux 2 2 2 1300 1700 0 0
+#aux 3 0 0 900 900 0 0
+aux 3 13 1 1700 2100 0 0
+#aux 4 0 0 900 900 0 0
+aux 4 28 2 900 1300 0 0
+#aux 5 0 0 900 900 0 0
+aux 5 35 4 1800 2100 0 0
+#aux 6 0 0 900 900 0 0
+aux 6 35 3 1700 2100 0 0
+
+# rxfail
+#rxfail 3 a 875
+rxfail 3 s 1300
+#rxfail 5 h 1500
+rxfail 5 s 2000
+
+# master
+#set dyn_notch_q = 300
+set dyn_notch_q = 500
+#set acc_calibration = 0,0,0,0
+set acc_calibration = -38,8,2,1
+#set mag_hardware = AUTO
+set mag_hardware = NONE
+#set max_check = 1900
+set max_check = 2000
+#set rc_smoothing_auto_factor = 30
+set rc_smoothing_auto_factor = 250
+#set rc_smoothing_setpoint_cutoff = 0
+set rc_smoothing_setpoint_cutoff = 25
+#set rc_smoothing_feedforward_cutoff = 0
+set rc_smoothing_feedforward_cutoff = 25
+#set serialrx_provider = SPEK1024
+set serialrx_provider = CRSF
+#set blackbox_sample_rate = 1/4
+set blackbox_sample_rate = 1/2
+#set dshot_idle_value = 550
+set dshot_idle_value = 1000
+#set dshot_bidir = OFF
+set dshot_bidir = ON
+#set motor_pwm_protocol = DISABLED
+set motor_pwm_protocol = DSHOT300
+#set motor_poles = 14
+set motor_poles = 12
+#set vbat_warning_cell_voltage = 350
+set vbat_warning_cell_voltage = 344
+#set current_meter = VIRTUAL
+set current_meter = ADC
+#set battery_meter = NONE
+set battery_meter = ADC
+#set ibata_scale = 400
+set ibata_scale = 470
+#set yaw_motors_reversed = OFF
+set yaw_motors_reversed = ON
+#set small_angle = 25
+set small_angle = 180
+#set gps_provider = NMEA
+set gps_provider = UBLOX
+#set gps_sbas_mode = NONE
+set gps_sbas_mode = EGNOS
+#set gps_ublox_use_galileo = OFF
+set gps_ublox_use_galileo = ON
+#set gps_set_home_point_once = OFF
+set gps_set_home_point_once = ON
+#set osd_vbat_pos = 234
+set osd_vbat_pos = 2472
+#set osd_link_quality_pos = 234
+set osd_link_quality_pos = 2448
+#set osd_rssi_dbm_pos = 234
+set osd_rssi_dbm_pos = 2480
+#set osd_tim_1_pos = 234
+set osd_tim_1_pos = 504
+#set osd_tim_2_pos = 234
+set osd_tim_2_pos = 2512
+#set osd_flymode_pos = 234
+set osd_flymode_pos = 2098
+#set osd_throttle_pos = 234
+set osd_throttle_pos = 2087
+#set osd_crosshairs_pos = 205
+set osd_crosshairs_pos = 2318
+#set osd_ah_pos = 78
+set osd_ah_pos = 2191
+#set osd_current_pos = 234
+set osd_current_pos = 2504
+#set osd_craft_name_pos = 234
+set osd_craft_name_pos = 9
+#set osd_altitude_pos = 234
+set osd_altitude_pos = 18476
+#set osd_warnings_pos = 14665
+set osd_warnings_pos = 14474
+#set osd_avg_cell_voltage_pos = 234
+set osd_avg_cell_voltage_pos = 2440
+#set osd_stat_max_fft = OFF
+set osd_stat_max_fft = ON
+#set osd_displayport_device = AUTO
+set osd_displayport_device = MSP
+#set debug_mode = NONE
+set debug_mode = GYRO_SCALED
+#set vcd_video_system = AUTO
+set vcd_video_system = PAL
+#set displayport_msp_serial = -1
+set displayport_msp_serial = 0
+#set gyro_1_sensor_align = CW180
+set gyro_1_sensor_align = CW0
+#set gyro_1_align_yaw = 1800
+set gyro_1_align_yaw = 0
+#set name = -
+set name = Mobula8 O3
+
+profile 0
+
+# profile 0
+#set dterm_lpf1_static_hz = 75
+set dterm_lpf1_static_hz = 0
+#set iterm_relax_cutoff = 15
+set iterm_relax_cutoff = 25
+#set p_pitch = 47
+set p_pitch = 56
+#set i_pitch = 84
+set i_pitch = 100
+#set d_pitch = 46
+set d_pitch = 52
+#set f_pitch = 125
+set f_pitch = 149
+#set p_roll = 45
+set p_roll = 53
+#set i_roll = 80
+set i_roll = 95
+#set d_roll = 40
+set d_roll = 46
+#set f_roll = 120
+set f_roll = 143
+#set p_yaw = 45
+set p_yaw = 53
+#set i_yaw = 80
+set i_yaw = 95
+#set f_yaw = 120
+set f_yaw = 143
+#set d_min_roll = 30
+set d_min_roll = 43
+#set d_min_pitch = 34
+set d_min_pitch = 48
+#set d_max_advance = 20
+set d_max_advance = 0
+#set thrust_linear = 0
+set thrust_linear = 20
+#set feedforward_averaging = OFF
+set feedforward_averaging = 2_POINT
+#set feedforward_smooth_factor = 25
+set feedforward_smooth_factor = 65
+#set feedforward_jitter_factor = 7
+set feedforward_jitter_factor = 9
+#set feedforward_max_rate_limit = 90
+set feedforward_max_rate_limit = 95
+#set simplified_master_multiplier = 100
+set simplified_master_multiplier = 120
+#set simplified_d_gain = 100
+set simplified_d_gain = 120
+#set simplified_dmax_gain = 100
+set simplified_dmax_gain = 20
+
+profile 1
+
+# profile 1
+#set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_min_hz = 63
+#set dterm_lpf1_dyn_max_hz = 150
+set dterm_lpf1_dyn_max_hz = 127
+#set dterm_lpf1_static_hz = 75
+set dterm_lpf1_static_hz = 63
+#set dterm_lpf2_static_hz = 150
+set dterm_lpf2_static_hz = 127
+#set d_pitch = 46
+set d_pitch = 36
+#set d_roll = 40
+set d_roll = 31
+#set d_min_roll = 30
+set d_min_roll = 23
+#set d_min_pitch = 34
+set d_min_pitch = 27
+#set simplified_d_gain = 100
+set simplified_d_gain = 80
+#set simplified_dterm_filter_multiplier = 100
+set simplified_dterm_filter_multiplier = 85
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+# rateprofile 2
+#set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
+#set roll_rc_rate = 7
+set roll_rc_rate = 110
+#set pitch_rc_rate = 7
+set pitch_rc_rate = 110
+#set yaw_rc_rate = 7
+set yaw_rc_rate = 100
+#set roll_srate = 67
+set roll_srate = 75
+#set pitch_srate = 67
+set pitch_srate = 75
+#set yaw_srate = 67
+set yaw_srate = 70
+#set tpa_breakpoint = 1350
+set tpa_breakpoint = 1250
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
