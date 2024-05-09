@@ -211,7 +211,6 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
-feature GPS
 feature OSD
 feature AIRMODE
 feature ESC_SENSOR
@@ -223,7 +222,7 @@ serial 0 131073 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
 serial 3 1024 115200 57600 0 115200
-serial 5 2 115200 115200 0 115200
+serial 5 0 115200 115200 0 115200
 
 # mixer
 mixer QUADX
@@ -569,7 +568,7 @@ set failsafe_off_delay = 10
 set failsafe_throttle = 1000
 set failsafe_switch_mode = STAGE1
 set failsafe_throttle_low_delay = 100
-set failsafe_procedure = GPS-RESCUE
+set failsafe_procedure = DROP
 set failsafe_recovery_delay = 10
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
@@ -651,7 +650,7 @@ set gps_rescue_throttle_max = 1600
 set gps_rescue_throttle_hover = 1250
 set gps_rescue_sanity_checks = RESCUE_SANITY_FS_ONLY
 set gps_rescue_min_sats = 6
-set gps_rescue_allow_arming_without_fix = OFF
+set gps_rescue_allow_arming_without_fix = ON
 set gps_rescue_throttle_p = 15
 set gps_rescue_throttle_i = 15
 set gps_rescue_throttle_d = 20

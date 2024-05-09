@@ -18,12 +18,11 @@ signature
 
 # feature
 feature -TELEMETRY
-feature GPS
 feature ESC_SENSOR
 
 # serial
 serial 0 131073 115200 57600 0 115200
-serial 5 2 115200 115200 0 115200
+serial 5 0 115200 115200 0 115200
 
 # beeper
 beeper -GYRO_CALIBRATED
@@ -75,7 +74,6 @@ set acc_calibration = 43,-2,42,1
 set dshot_idle_value = 400
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
-set failsafe_procedure = GPS-RESCUE
 set yaw_motors_reversed = ON
 set small_angle = 180
 set gps_sbas_mode = EGNOS
@@ -85,6 +83,7 @@ set gps_rescue_alt_mode = CURRENT_ALT
 set gps_rescue_throttle_max = 1600
 set gps_rescue_throttle_hover = 1250
 set gps_rescue_min_sats = 6
+set gps_rescue_allow_arming_without_fix = ON
 set simplified_gyro_filter_multiplier = 130
 set report_cell_voltage = ON
 set osd_warn_bitmask = 270335
