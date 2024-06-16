@@ -1,0 +1,56 @@
+diff all bare
+
+# version
+# Betaflight / STM32F405 (S405) 4.5.0 Apr 28 2024 / 02:48:02 (c155f5830) MSP API: 1.46
+# config rev: 3068e6e
+
+board_name FURYF4OSD
+manufacturer_id DIAT
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial 0 1 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
+
+# map
+map TREA1234
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 2 900 1300 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 13 1 1700 2100 0 0
+
+# master
+set acc_calibration = 10,109,-40,1
+set rssi_channel = 8
+set osd_rssi_pos = 2073
+set osd_link_quality_pos = 2065
+set osd_rssi_dbm_pos = 2058
+set osd_crosshairs_pos = 2318
+set osd_ah_pos = 2191
+set osd_warnings_pos = 14740
+set osd_avg_cell_voltage_pos = 2498
+set osd_sys_distance_pos = 2459
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# 

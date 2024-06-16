@@ -1,0 +1,191 @@
+diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.4.2 Jun  1 2023 / 05:58:05 (23d066d08) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name IFLIGHT_F722_TWING
+manufacturer_id IFRC
+mcu_id 002800295632500120303236
+signature 
+
+# timer
+timer A08 AF1
+# pin A08: TIM1 CH1 (AF1)
+timer B03 AF1
+# pin B03: TIM2 CH2 (AF1)
+timer B04 AF2
+# pin B04: TIM3 CH1 (AF2)
+timer B05 AF2
+# pin B05: TIM3 CH2 (AF2)
+timer D12 AF2
+# pin D12: TIM4 CH1 (AF2)
+timer D13 AF2
+# pin D13: TIM4 CH2 (AF2)
+
+# dma
+dma pin A08 0
+# pin A08: DMA2 Stream 6 Channel 0
+dma pin B03 0
+# pin B03: DMA1 Stream 6 Channel 3
+dma pin B04 0
+# pin B04: DMA1 Stream 4 Channel 5
+dma pin B05 0
+# pin B05: DMA1 Stream 5 Channel 5
+dma pin D12 0
+# pin D12: DMA1 Stream 0 Channel 2
+dma pin D13 0
+# pin D13: DMA1 Stream 3 Channel 2
+
+# feature
+feature -SOFTSERIAL
+feature -TELEMETRY
+feature LED_STRIP
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 131073 115200 57600 0 115200
+
+# led
+led 0 0,0::L:5
+led 1 1,0::C:5
+led 2 2,0::C:5
+led 3 3,0::C:5
+led 4 4,0::C:5
+
+# color
+color 5 109,0,255
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 13 1 1700 2100 0 0
+aux 4 15 4 1300 1700 0 0
+aux 5 35 4 1700 2100 0 0
+aux 6 36 3 1700 2100 0 0
+
+# master
+set gyro_to_use = FIRST
+set dyn_notch_q = 120
+set dyn_notch_min_hz = 150
+set dyn_notch_max_hz = 400
+set acc_lpf_hz = 10
+set acc_calibration = -67,-79,-9,1
+set baro_hardware = NONE
+set dshot_idle_value = 700
+set dshot_bidir = ON
+set failsafe_delay = 4
+set failsafe_recovery_delay = 20
+set vbat_max_cell_voltage = 422
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_auto_baud = ON
+set gps_rescue_ascend_rate = 500
+set gps_rescue_ground_speed = 2000
+set gps_rescue_descent_dist = 200
+set gps_rescue_landing_alt = 5
+set gps_rescue_throttle_max = 1600
+set gps_rescue_throttle_hover = 1280
+set gps_rescue_sanity_checks = RESCUE_SANITY_ON
+set gps_rescue_throttle_p = 150
+set gps_rescue_throttle_i = 20
+set gps_rescue_throttle_d = 50
+set gps_rescue_velocity_p = 80
+set gps_rescue_velocity_i = 20
+set gps_rescue_velocity_d = 15
+set gps_rescue_yaw_p = 40
+set osd_vbat_pos = 2548
+set osd_rssi_pos = 2588
+set osd_link_quality_pos = 2556
+set osd_rssi_dbm_pos = 2524
+set osd_tim_2_pos = 405
+set osd_flymode_pos = 2580
+set osd_throttle_pos = 245
+set osd_vtx_channel_pos = 373
+set osd_crosshairs_pos = 2361
+set osd_ah_sbar_pos = 314
+set osd_ah_pos = 2234
+set osd_current_pos = 2506
+set osd_mah_drawn_pos = 2571
+set osd_wh_drawn_pos = 2539
+set osd_craft_name_pos = 503
+set osd_gps_speed_pos = 313
+set osd_gps_sats_pos = 281
+set osd_home_dir_pos = 399
+set osd_home_dist_pos = 430
+set osd_altitude_pos = 181
+set osd_power_pos = 388
+set osd_warnings_pos = 14581
+set osd_avg_cell_voltage_pos = 2516
+set osd_disarmed_pos = 2327
+set osd_flip_arrow_pos = 2394
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set vcd_video_system = HD
+set gyro_2_align_yaw = 900
+
+profile 0
+
+# profile 0
+set iterm_relax_cutoff = 10
+set iterm_windup = 100
+set yaw_lowpass_hz = 70
+set p_pitch = 65
+set i_pitch = 99
+set d_pitch = 52
+set f_pitch = 118
+set p_roll = 62
+set i_roll = 94
+set d_roll = 49
+set f_roll = 115
+set p_yaw = 50
+set i_yaw = 99
+set f_yaw = 100
+set d_min_roll = 35
+set d_min_pitch = 37
+set feedforward_transition = 40
+set tpa_rate = 60
+set tpa_breakpoint = 1280
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
