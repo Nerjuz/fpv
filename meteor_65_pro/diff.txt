@@ -1,5 +1,4 @@
-defaults nosave
-
+diff all
 ###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
@@ -128,7 +127,7 @@ set dyn_notch_q = 500
 set dyn_notch_max_hz = 500
 set dyn_lpf_gyro_min_hz = 220
 set dyn_lpf_gyro_max_hz = 550
-set acc_calibration = 53,60,23,1
+set acc_calibration = 8,48,21,1
 set mag_hardware = NONE
 set baro_hardware = NONE
 set max_check = 2000
@@ -156,15 +155,15 @@ set ibata_scale = 179
 set small_angle = 180
 set pid_process_denom = 1
 set osd_tim1 = 2561
-set osd_vbat_pos = 2433
-set osd_rssi_pos = 2369
+set osd_vbat_pos = 6529
+set osd_rssi_pos = 6465
 set osd_link_quality_pos = 321
-set osd_rssi_dbm_pos = 2401
+set osd_rssi_dbm_pos = 6497
 set osd_tim_1_pos = 386
-set osd_tim_2_pos = 2454
+set osd_tim_2_pos = 6550
 set osd_remaining_time_estimate_pos = 33
-set osd_flymode_pos = 2422
-set osd_throttle_pos = 2390
+set osd_flymode_pos = 6518
+set osd_throttle_pos = 6486
 set osd_vtx_channel_pos = 353
 set osd_crosshairs_pos = 2286
 set osd_ah_pos = 2159
@@ -172,7 +171,7 @@ set osd_current_pos = 353
 set osd_craft_name_pos = 395
 set osd_home_dist_pos = 98
 set osd_flight_dist_pos = 130
-set osd_warnings_pos = 2378
+set osd_warnings_pos = 6474
 set osd_avg_cell_voltage_pos = 44
 set osd_pit_ang_pos = 97
 set osd_rol_ang_pos = 65
@@ -188,12 +187,13 @@ set osd_stat_bb_no = OFF
 set osd_stat_min_link_quality = ON
 set osd_stat_total_time = ON
 set osd_stat_min_rssi_dbm = ON
+set osd_profile = 2
 set system_hse_mhz = 8
-set vtx_band = 5
-set vtx_channel = 8
+set vtx_band = 1
+set vtx_channel = 1
 set vtx_power = 1
 set vtx_low_power_disarm = ON
-set vtx_freq = 5917
+set vtx_freq = 5865
 set max7456_spi_bus = 2
 set frsky_spi_tx_id = 124,6
 set frsky_spi_offset = -31
@@ -262,6 +262,8 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
+save
+# 
