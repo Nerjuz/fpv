@@ -1,8 +1,8 @@
 diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.5.0 Apr 28 2024 / 04:08:00 (c155f5830) MSP API: 1.46
-# config rev: 3068e6e
+# Betaflight / STM32F7X2 (S7X2) 4.5.1 Jul 27 2024 / 09:18:39 (77d01ba3b) MSP API: 1.46
+# config rev: 6440ad8
 
 # start the command batch
 batch start
@@ -12,7 +12,7 @@ defaults nosave
 
 board_name SPEEDYBEEF7V3
 manufacturer_id SPBE
-mcu_id 0029002d3532510739323431
+mcu_id 0047003a3133510f37333437
 signature 
 
 # feature
@@ -71,7 +71,7 @@ set dyn_notch_min_hz = 150
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = 43,-2,42,1
+set acc_calibration = -6,-7,9,1
 set dshot_idle_value = 400
 set dshot_bidir = ON
 set failsafe_recovery_delay = 10
@@ -97,8 +97,6 @@ set osd_rssi_dbm_pos = 2558
 set osd_tim_2_pos = 2590
 set osd_flymode_pos = 2142
 set osd_throttle_pos = 2130
-set osd_crosshairs_pos = 2360
-set osd_ah_pos = 2233
 set osd_current_pos = 2541
 set osd_mah_drawn_pos = 2551
 set osd_wh_drawn_pos = 2574
