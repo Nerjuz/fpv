@@ -1,9 +1,8 @@
 diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.2 Jun  1 2023 / 02:36:31 (23d066d08) MSP API: 1.45
-
-# config: YES
+# Betaflight / STM32F7X2 (S7X2) 4.5.0 Apr 28 2024 / 04:08:00 (c155f5830) MSP API: 1.46
+# config rev: 3068e6e
 
 # start the command batch
 batch start
@@ -17,11 +16,13 @@ mcu_id 0029002d3532510739323431
 signature 
 
 # feature
-feature -TELEMETRY
+feature OSD
 feature ESC_SENSOR
 
 # serial
 serial 0 131073 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+serial 3 1024 115200 57600 0 115200
 serial 5 0 115200 115200 0 115200
 
 # beeper
@@ -73,7 +74,7 @@ set acc_lpf_hz = 10
 set acc_calibration = 43,-2,42,1
 set dshot_idle_value = 400
 set dshot_bidir = ON
-set motor_pwm_protocol = DSHOT600
+set failsafe_recovery_delay = 10
 set yaw_motors_reversed = ON
 set small_angle = 180
 set gps_sbas_mode = EGNOS
@@ -86,89 +87,27 @@ set gps_rescue_min_sats = 6
 set gps_rescue_allow_arming_without_fix = ON
 set simplified_gyro_filter_multiplier = 130
 set report_cell_voltage = ON
-set osd_warn_bitmask = 270335
 set osd_link_quality_alarm = 95
 set osd_rssi_dbm_alarm = -95
 set osd_cap_alarm = 740
 set osd_alt_alarm = 120
 set osd_vbat_pos = 2510
-set osd_rssi_pos = 341
 set osd_link_quality_pos = 2526
-set osd_link_tx_power_pos = 341
 set osd_rssi_dbm_pos = 2558
-set osd_rsnr_pos = 341
-set osd_tim_1_pos = 341
 set osd_tim_2_pos = 2590
-set osd_remaining_time_estimate_pos = 341
 set osd_flymode_pos = 2142
-set osd_anti_gravity_pos = 341
-set osd_g_force_pos = 341
 set osd_throttle_pos = 2130
-set osd_vtx_channel_pos = 341
 set osd_crosshairs_pos = 2360
-set osd_ah_sbar_pos = 313
 set osd_ah_pos = 2233
 set osd_current_pos = 2541
 set osd_mah_drawn_pos = 2551
 set osd_wh_drawn_pos = 2574
-set osd_motor_diag_pos = 341
-set osd_craft_name_pos = 341
-set osd_pilot_name_pos = 341
-set osd_gps_speed_pos = 341
-set osd_gps_lon_pos = 341
-set osd_gps_lat_pos = 341
-set osd_gps_sats_pos = 341
-set osd_home_dir_pos = 341
-set osd_home_dist_pos = 341
-set osd_flight_dist_pos = 341
-set osd_compass_bar_pos = 341
 set osd_altitude_pos = 18519
-set osd_pid_roll_pos = 341
-set osd_pid_pitch_pos = 341
-set osd_pid_yaw_pos = 341
-set osd_debug_pos = 341
-set osd_power_pos = 341
-set osd_pidrate_profile_pos = 341
 set osd_warnings_pos = 14548
 set osd_avg_cell_voltage_pos = 2518
-set osd_pit_ang_pos = 341
-set osd_rol_ang_pos = 341
-set osd_battery_usage_pos = 341
 set osd_disarmed_pos = 2389
-set osd_nheading_pos = 341
-set osd_up_down_reference_pos = 312
-set osd_ready_mode_pos = 341
-set osd_esc_tmp_pos = 341
-set osd_esc_rpm_pos = 341
-set osd_esc_rpm_freq_pos = 341
-set osd_rtc_date_time_pos = 341
-set osd_adjustment_range_pos = 341
-set osd_flip_arrow_pos = 341
-set osd_core_temp_pos = 341
-set osd_log_status_pos = 341
-set osd_stick_overlay_left_pos = 341
-set osd_stick_overlay_right_pos = 341
-set osd_rate_profile_name_pos = 341
-set osd_pid_profile_name_pos = 341
-set osd_profile_name_pos = 341
-set osd_rcchannels_pos = 341
-set osd_camera_frame_pos = 142
 set osd_efficiency_pos = 435
-set osd_total_flights_pos = 341
-set osd_aux_pos = 341
-set osd_sys_goggle_voltage_pos = 341
-set osd_sys_vtx_voltage_pos = 341
-set osd_sys_bitrate_pos = 341
-set osd_sys_delay_pos = 341
-set osd_sys_distance_pos = 341
-set osd_sys_lq_pos = 341
-set osd_sys_goggle_dvr_pos = 341
-set osd_sys_vtx_dvr_pos = 341
-set osd_sys_warnings_pos = 341
-set osd_sys_vtx_temp_pos = 341
-set osd_sys_fan_speed_pos = 341
-set osd_displayport_device = MSP
-set vcd_video_system = HD
+set displayport_msp_fonts = 0,0,0,0
 set rpm_filter_min_hz = 125
 
 profile 0
@@ -190,6 +129,7 @@ set f_roll = 116
 set p_yaw = 67
 set i_yaw = 114
 set f_yaw = 116
+set horizon_level_strength = 50
 set d_min_roll = 56
 set d_min_pitch = 66
 set thrust_linear = 20
@@ -206,9 +146,18 @@ set tpa_rate = 70
 
 profile 1
 
+# profile 1
+set horizon_level_strength = 50
+
 profile 2
 
+# profile 2
+set horizon_level_strength = 50
+
 profile 3
+
+# profile 3
+set horizon_level_strength = 50
 
 # restore original profile selection
 profile 0
