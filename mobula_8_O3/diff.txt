@@ -59,7 +59,7 @@ aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
 aux 3 13 1 1700 2100 0 0
-aux 4 28 2 900 1300 0 0
+aux 4 28 4 900 1300 0 0
 aux 5 35 4 1700 2100 0 0
 aux 6 35 3 1700 2100 0 0
 
@@ -67,6 +67,7 @@ aux 6 35 3 1700 2100 0 0
 set dyn_notch_count = 1
 set dyn_notch_q = 500
 set dyn_notch_min_hz = 150
+set acc_trim_roll = -9
 set acc_calibration = -35,2,-4,1
 set rc_smoothing_setpoint_cutoff = 25
 set rc_smoothing_feedforward_cutoff = 25
