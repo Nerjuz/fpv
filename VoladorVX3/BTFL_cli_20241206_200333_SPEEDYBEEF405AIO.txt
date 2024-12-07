@@ -202,7 +202,7 @@ feature ANTI_GRAVITY
 serial 20 1 115200 57600 0 115200
 serial 0 1 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
-serial 2 131073 115200 57600 0 115200
+serial 2 0 115200 57600 0 115200
 serial 3 0 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 serial 5 64 115200 57600 0 115200
@@ -381,12 +381,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1700 2100 0 0
-aux 1 1 2 1700 2100 0 0
-aux 2 2 2 1300 1700 0 0
-aux 3 27 3 1300 1700 0 0
-aux 4 13 1 1700 2100 0 0
-aux 5 35 3 1700 2100 0 0
+aux 0 13 255 900 900 0 0
+aux 1 0 0 900 900 0 0
+aux 2 0 0 900 900 0 0
+aux 3 0 0 900 900 0 0
+aux 4 0 0 900 900 0 0
+aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -508,7 +508,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -65,4,-5,1
+set acc_calibration = 0,0,0,0
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -607,7 +607,7 @@ set failsafe_recovery_delay = 5
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
 set align_board_pitch = 0
-set align_board_yaw = 0
+set align_board_yaw = -45
 set bat_capacity = 0
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
@@ -638,7 +638,7 @@ set beeper_inversion = ON
 set beeper_od = OFF
 set beeper_frequency = 0
 set beeper_dshot_beacon_tone = 1
-set yaw_motors_reversed = ON
+set yaw_motors_reversed = OFF
 set mixer_type = LEGACY
 set crashflip_motor_percent = 0
 set crashflip_expo = 35
@@ -712,7 +712,7 @@ set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set hott_alarm_int = 5
 set pid_in_tlm = OFF
-set report_cell_voltage = ON
+set report_cell_voltage = OFF
 set telemetry_disabled_voltage = OFF
 set telemetry_disabled_current = OFF
 set telemetry_disabled_fuel = OFF
@@ -750,7 +750,7 @@ set osd_units = METRIC
 set osd_warn_bitmask = 270335
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 80
-set osd_rssi_dbm_alarm = -95
+set osd_rssi_dbm_alarm = -60
 set osd_rsnr_alarm = 4
 set osd_cap_alarm = 2200
 set osd_alt_alarm = 100
@@ -849,8 +849,8 @@ set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
 set osd_profile_3_name = -
-set osd_gps_sats_show_pdop = ON
-set osd_displayport_device = MSP
+set osd_gps_sats_show_pdop = OFF
+set osd_displayport_device = AUTO
 set osd_rcchannels = -1,-1,-1,-1
 set osd_camera_frame_width = 24
 set osd_camera_frame_height = 11
@@ -878,7 +878,7 @@ set vtx_softserial_alt = OFF
 set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vcd_video_system = HD
+set vcd_video_system = AUTO
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
