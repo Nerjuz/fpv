@@ -1,0 +1,78 @@
+# diff all defaults
+
+# version
+# Betaflight / STM32G47X (SG47) 4.5.0 Dec  8 2023 / 12:04:40 (b2ce40263) MSP API: 1.46
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TAKERG4AIO
+manufacturer_id GEPR
+mcu_id 004000545246501120333536
+signature 
+#feature -OSD
+
+# feature
+feature OSD
+
+# led
+#led 0 0,0::C:0
+led 0 0,0::C:1
+#led 1 0,0::C:0
+led 1 1,0::C:1
+#led 2 0,0::C:0
+led 2 2,0::C:1
+#led 3 0,0::C:0
+led 3 3,0::C:1
+#led 4 0,0::C:0
+led 4 4,0::C:1
+#led 5 0,0::C:0
+led 5 5,0::C:1
+#led 6 0,0::C:0
+led 6 6,0::C:1
+#led 7 0,0::C:0
+led 7 7,0::C:1
+
+# master
+#set acc_calibration = 0,0,0,0
+set acc_calibration = 33,-61,54,1
+#set align_board_yaw = 45
+set align_board_yaw = 0
+#set small_angle = 25
+set small_angle = 1
+#set osd_canvas_width = 53
+set osd_canvas_width = 30
+#set osd_canvas_height = 20
+set osd_canvas_height = 13
+#set gyro_1_sensor_align = CW270
+set gyro_1_sensor_align = CW0
+#set gyro_1_align_yaw = 2700
+set gyro_1_align_yaw = 0
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
