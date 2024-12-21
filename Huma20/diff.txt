@@ -1,8 +1,8 @@
 diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.5.1 Sep  1 2024 / 11:40:33 (77d01ba3b) MSP API: 1.46
-# config rev: f7b8298
+# Betaflight / STM32F7X2 (S7X2) 4.5.1 Dec 20 2024 / 19:50:37 (77d01ba3b) MSP API: 1.46
+# config rev: 3c54148
 
 # start the command batch
 batch start
@@ -18,11 +18,14 @@ signature
 # name: Huma20
 
 # feature
+feature GPS
+feature TELEMETRY
 feature OSD
 
 # serial
 serial 1 64 115200 57600 0 115200
 serial 3 131073 115200 57600 0 115200
+serial 5 2 115200 115200 0 115200
 
 # beeper
 beeper -ON_USB
@@ -33,32 +36,60 @@ beacon RX_SET
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 1700 2100 0 0
-aux 2 13 2 1700 2100 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 3 1300 1700 0 0
+aux 4 13 1 1700 2100 0 0
+aux 5 35 3 1700 2100 0 0
+
+# rxfail
+rxfail 3 s 1200
+rxfail 6 s 2000
 
 # master
 set gyro_to_use = FIRST
 set dyn_notch_count = 1
 set dyn_notch_q = 650
-set acc_calibration = -5,-16,2,1
+set acc_calibration = -8,3,-4,1
 set baro_hardware = NONE
 set blackbox_sample_rate = 1/8
 set dshot_idle_value = 900
 set dshot_bidir = ON
 set motor_poles = 12
 set motor_output_reordering = 2,3,0,1,4,5,6,7
+set failsafe_procedure = GPS-RESCUE
 set align_board_yaw = 45
 set vbat_max_cell_voltage = 435
 set beeper_dshot_beacon_tone = 2
 set small_angle = 180
+set gps_sbas_mode = EGNOS
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_throttle_hover = 1200
+set gps_rescue_min_sats = 6
+set gps_rescue_allow_arming_without_fix = ON
 set deadband = 2
 set yaw_deadband = 2
-set osd_link_quality_pos = 2371
-set osd_tim_2_pos = 2403
-set osd_flymode_pos = 2072
-set osd_throttle_pos = 2104
-set osd_craft_name_pos = 2518
-set osd_avg_cell_voltage_pos = 2339
+set report_cell_voltage = ON
+set osd_rssi_dbm_alarm = -100
+set osd_vbat_pos = 2610
+set osd_link_quality_pos = 3619
+set osd_rssi_dbm_pos = 3587
+set osd_tim_2_pos = 2587
+set osd_flymode_pos = 2642
+set osd_current_pos = 2598
+set osd_mah_drawn_pos = 2630
+set osd_wh_drawn_pos = 2567
+set osd_gps_speed_pos = 2140
+set osd_gps_lon_pos = 2089
+set osd_gps_lat_pos = 3104
+set osd_gps_sats_pos = 3137
+set osd_home_dir_pos = 2138
+set osd_home_dist_pos = 2132
+set osd_compass_bar_pos = 2102
+set osd_altitude_pos = 18510
+set osd_avg_cell_voltage_pos = 2578
+set osd_disarmed_pos = 2357
 set debug_mode = GYRO_SCALED
 set gyro_1_sensor_align = CW90FLIP
 set gyro_1_align_pitch = 1800
@@ -113,15 +144,15 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set thr_mid = 100
-set thr_expo = 35
-set rates_type = KISS
-set roll_rc_rate = 100
-set pitch_rc_rate = 100
-set yaw_rc_rate = 100
-set roll_srate = 70
-set pitch_srate = 70
-set yaw_srate = 70
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
 
 rateprofile 1
 
