@@ -208,6 +208,7 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
 feature GPS
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -364,11 +365,11 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 1700 2100 0 0
-aux 2 13 2 1700 2100 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 27 3 1300 1700 0 0
+aux 4 13 1 1700 2100 0 0
+aux 5 35 3 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -447,8 +448,8 @@ rxfail 1 a
 rxfail 2 a
 rxfail 3 s 1200
 rxfail 4 h
-rxfail 5 s 1500
-rxfail 6 h
+rxfail 5 h
+rxfail 6 s 2000
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -1404,19 +1405,19 @@ rateprofile 0
 
 # rateprofile 0
 set rateprofile_name = -
-set thr_mid = 100
-set thr_expo = 35
-set rates_type = KISS
+set thr_mid = 50
+set thr_expo = 0
+set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 100
-set pitch_rc_rate = 100
-set yaw_rc_rate = 100
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 70
-set pitch_srate = 70
-set yaw_srate = 70
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
