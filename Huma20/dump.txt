@@ -446,7 +446,7 @@ vtx 9 0 0 0 0 900 900
 rxfail 0 a
 rxfail 1 a
 rxfail 2 a
-rxfail 3 s 1200
+rxfail 3 s 1400
 rxfail 4 h
 rxfail 5 h
 rxfail 6 s 2000
@@ -651,8 +651,8 @@ set gps_rescue_descent_dist = 20
 set gps_rescue_descend_rate = 150
 set gps_rescue_landing_alt = 4
 set gps_rescue_disarm_threshold = 20
-set gps_rescue_throttle_min = 1100
-set gps_rescue_throttle_max = 1700
+set gps_rescue_throttle_min = 1200
+set gps_rescue_throttle_max = 1400
 set gps_rescue_throttle_hover = 1200
 set gps_rescue_sanity_checks = RESCUE_SANITY_FS_ONLY
 set gps_rescue_min_sats = 6
