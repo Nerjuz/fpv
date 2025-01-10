@@ -395,7 +395,7 @@ aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
 aux 3 13 1 1700 2100 0 0
 aux 4 28 2 900 1700 0 0
-aux 5 35 4 1700 2100 0 0
+aux 5 35 3 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -521,7 +521,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 8,48,21,1
+set acc_calibration = -36,25,19,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -893,7 +893,7 @@ set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
 set vtx_band = 1
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 3
 set vtx_low_power_disarm = ON
 set vtx_freq = 5865
 set vtx_pit_mode_freq = 0
