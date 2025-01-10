@@ -219,6 +219,7 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -373,10 +374,10 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 900 1300 0 0
+aux 1 1 1 1700 2100 0 0
 aux 2 2 1 1300 1700 0 0
-aux 3 13 3 1700 2100 0 0
-aux 4 35 2 1700 2100 0 0
+aux 3 13 2 1700 2100 0 0
+aux 4 35 3 1700 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
@@ -745,28 +746,28 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2369
+set osd_vbat_pos = 2412
 set osd_rssi_pos = 226
-set osd_link_quality_pos = 2337
+set osd_link_quality_pos = 2433
 set osd_link_tx_power_pos = 341
-set osd_rssi_dbm_pos = 2305
+set osd_rssi_dbm_pos = 2401
 set osd_rsnr_pos = 341
 set osd_tim_1_pos = 386
-set osd_tim_2_pos = 2454
+set osd_tim_2_pos = 2444
 set osd_remaining_time_estimate_pos = 33
-set osd_flymode_pos = 2422
+set osd_flymode_pos = 2391
 set osd_anti_gravity_pos = 341
 set osd_g_force_pos = 341
-set osd_throttle_pos = 2390
-set osd_vtx_channel_pos = 2081
-set osd_crosshairs_pos = 2253
+set osd_throttle_pos = 2421
+set osd_vtx_channel_pos = 33
+set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 185
-set osd_current_pos = 2400
-set osd_mah_drawn_pos = 2434
+set osd_current_pos = 2453
+set osd_mah_drawn_pos = 2369
 set osd_wh_drawn_pos = 341
 set osd_motor_diag_pos = 341
-set osd_craft_name_pos = 2443
+set osd_craft_name_pos = 395
 set osd_pilot_name_pos = 341
 set osd_gps_speed_pos = 341
 set osd_gps_lon_pos = 341
@@ -849,12 +850,12 @@ set rate_6pos_switch = OFF
 set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
-set vtx_band = 5
-set vtx_channel = 8
+set vtx_band = 1
+set vtx_channel = 1
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5917
+set vtx_freq = 5865
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
@@ -1428,15 +1429,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
