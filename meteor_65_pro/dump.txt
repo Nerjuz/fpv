@@ -393,9 +393,9 @@ mode_color 7 0 3
 aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
-aux 3 13 1 1700 2100 0 0
+aux 3 13 3 1700 2100 0 0
 aux 4 28 2 900 1700 0 0
-aux 5 35 3 1700 2100 0 0
+aux 5 35 1 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -616,7 +616,7 @@ set gimbal_mode = NORMAL
 set bat_capacity = 0
 set vbat_max_cell_voltage = 435
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 325
+set vbat_min_cell_voltage = 320
 set vbat_warning_cell_voltage = 330
 set vbat_hysteresis = 1
 set current_meter = ADC
@@ -790,23 +790,23 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2561
 set osd_tim2 = 2561
-set osd_vbat_pos = 6529
-set osd_rssi_pos = 6465
-set osd_link_quality_pos = 321
+set osd_vbat_pos = 6507
+set osd_rssi_pos = 291
+set osd_link_quality_pos = 6529
 set osd_rssi_dbm_pos = 6497
 set osd_tim_1_pos = 386
-set osd_tim_2_pos = 6550
+set osd_tim_2_pos = 6539
 set osd_remaining_time_estimate_pos = 33
-set osd_flymode_pos = 6518
+set osd_flymode_pos = 6486
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 6486
+set osd_throttle_pos = 6518
 set osd_vtx_channel_pos = 353
-set osd_crosshairs_pos = 2286
+set osd_crosshairs_pos = 238
 set osd_ah_sbar_pos = 206
-set osd_ah_pos = 2159
-set osd_current_pos = 353
-set osd_mah_drawn_pos = 234
+set osd_ah_pos = 111
+set osd_current_pos = 6549
+set osd_mah_drawn_pos = 6466
 set osd_motor_diag_pos = 234
 set osd_craft_name_pos = 395
 set osd_display_name_pos = 234
@@ -891,11 +891,11 @@ set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
-set vtx_band = 1
-set vtx_channel = 1
-set vtx_power = 3
-set vtx_low_power_disarm = ON
-set vtx_freq = 5865
+set vtx_band = 5
+set vtx_channel = 7
+set vtx_power = 1
+set vtx_low_power_disarm = OFF
+set vtx_freq = 5880
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
@@ -1303,16 +1303,16 @@ rateprofile 1
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = BETAFLIGHT
-set roll_rc_rate = 100
-set pitch_rc_rate = 100
-set yaw_rc_rate = 100
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 70
-set pitch_srate = 70
-set yaw_srate = 70
+set rates_type = ACTUAL
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
 set tpa_rate = 65
 set tpa_breakpoint = 1350
 set tpa_mode = D
@@ -1427,4 +1427,4 @@ rateprofile 1
 
 # save configuration
 save
-# 
+# $X<0$X<0$X<0$X<0$X<0$X<0$X<0$X<0$X<0
