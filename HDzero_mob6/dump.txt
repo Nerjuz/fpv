@@ -1,4 +1,6 @@
-dump all
+
+
+# dump all
 
 # version
 # Betaflight / STM32F411 (S411) 4.4.2 Jun 25 2024 / 07:33:20 (23d066d08) MSP API: 1.45
@@ -698,7 +700,7 @@ set ledstrip_beacon_percent = 50
 set ledstrip_beacon_armed_only = OFF
 set ledstrip_brightness = 100
 set osd_units = METRIC
-set osd_warn_bitmask = 8191
+set osd_warn_bitmask = 8061
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 80
 set osd_rssi_dbm_alarm = -60
