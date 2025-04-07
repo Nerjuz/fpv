@@ -377,10 +377,10 @@ mode_color 7 0 3
 aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
-aux 3 13 1 1700 2100 0 0
+aux 3 13 3 1300 1700 0 0
 aux 4 28 2 900 1300 0 0
-aux 5 35 4 1700 2100 0 0
-aux 6 35 3 1700 2100 0 0
+aux 5 35 3 1700 2100 0 0
+aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -501,7 +501,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -35,2,-4,1
+set acc_calibration = 77,10,62,1
 set baro_bustype = I2C
 set baro_spi_device = 0
 set baro_i2c_device = 2
@@ -571,7 +571,7 @@ set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
 set motor_pwm_inversion = OFF
 set motor_poles = 12
-set motor_output_reordering = 0,1,2,3,4,5,6,7
+set motor_output_reordering = 2,3,0,1,4,5,6,7
 set thr_corr_value = 0
 set thr_corr_angle = 800
 set failsafe_delay = 15
@@ -583,8 +583,8 @@ set failsafe_procedure = DROP
 set failsafe_recovery_delay = 5
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
-set align_board_pitch = 0
-set align_board_yaw = 0
+set align_board_pitch = 180
+set align_board_yaw = 180
 set bat_capacity = 0
 set vbat_max_cell_voltage = 440
 set vbat_full_cell_voltage = 410
@@ -741,14 +741,14 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2510
+set osd_vbat_pos = 2574
 set osd_rssi_pos = 341
-set osd_link_quality_pos = 2526
+set osd_link_quality_pos = 2590
 set osd_link_tx_power_pos = 341
-set osd_rssi_dbm_pos = 2558
+set osd_rssi_dbm_pos = 2622
 set osd_rsnr_pos = 341
 set osd_tim_1_pos = 341
-set osd_tim_2_pos = 2590
+set osd_tim_2_pos = 2654
 set osd_remaining_time_estimate_pos = 341
 set osd_flymode_pos = 2142
 set osd_anti_gravity_pos = 341
@@ -758,9 +758,9 @@ set osd_vtx_channel_pos = 341
 set osd_crosshairs_pos = 2360
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 2233
-set osd_current_pos = 2541
-set osd_mah_drawn_pos = 2551
-set osd_wh_drawn_pos = 2574
+set osd_current_pos = 2605
+set osd_mah_drawn_pos = 2615
+set osd_wh_drawn_pos = 2638
 set osd_motor_diag_pos = 341
 set osd_craft_name_pos = 341
 set osd_pilot_name_pos = 341
@@ -780,7 +780,7 @@ set osd_debug_pos = 341
 set osd_power_pos = 341
 set osd_pidrate_profile_pos = 341
 set osd_warnings_pos = 14548
-set osd_avg_cell_voltage_pos = 2518
+set osd_avg_cell_voltage_pos = 2582
 set osd_pit_ang_pos = 341
 set osd_rol_ang_pos = 341
 set osd_battery_usage_pos = 341
