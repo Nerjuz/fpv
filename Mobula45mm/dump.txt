@@ -748,7 +748,7 @@ set osd_link_tx_power_pos = 341
 set osd_rssi_dbm_pos = 2622
 set osd_rsnr_pos = 341
 set osd_tim_1_pos = 341
-set osd_tim_2_pos = 2614
+set osd_tim_2_pos = 2654
 set osd_remaining_time_estimate_pos = 341
 set osd_flymode_pos = 2142
 set osd_anti_gravity_pos = 341
@@ -759,7 +759,7 @@ set osd_crosshairs_pos = 2360
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 2233
 set osd_current_pos = 2605
-set osd_mah_drawn_pos = 2646
+set osd_mah_drawn_pos = 2615
 set osd_wh_drawn_pos = 2638
 set osd_motor_diag_pos = 341
 set osd_craft_name_pos = 341
@@ -1414,17 +1414,17 @@ rateprofile 0
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 20
+set pitch_expo = 20
+set yaw_expo = 20
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
@@ -1439,15 +1439,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 19
+set pitch_rc_rate = 19
+set yaw_rc_rate = 19
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 60
+set roll_srate = 90
+set pitch_srate = 90
+set yaw_srate = 90
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
@@ -1501,7 +1501,7 @@ set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
