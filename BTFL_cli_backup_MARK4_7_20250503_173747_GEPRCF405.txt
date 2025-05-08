@@ -1,0 +1,201 @@
+
+# version
+# Betaflight / STM32F405 (S405) 4.6.0 Dec 28 2024 / 20:49:06 (2a50634f6) MSP API: 1.47
+# config rev: 5a85a4e
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name GEPRCF405
+manufacturer_id GEPR
+mcu_id 004c00343233510e37373331
+signature 
+
+# name: MARK4_7
+
+# resources
+resource SERVO 1 B01
+
+# feature
+feature SERVO_TILT
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+feature CHANNEL_FORWARDING
+
+# serial
+serial UART1 8192 115200 57600 0 115200
+serial UART2 64 115200 57600 0 115200
+serial UART5 2 115200 57600 0 115200
+
+# servo
+servo 0 1700 2400 1800 50 7
+
+# beeper
+beeper -BAT_CRIT_LOW
+beeper -BAT_LOW
+beeper -SYSTEM_INIT
+beeper -ON_USB
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# led
+led 0 0,15::ATI:0
+led 1 1,15::ATI:0
+led 2 2,15::ATI:0
+led 3 3,15::ATI:0
+led 4 4,15::ATI:0
+led 5 5,15::ATI:0
+led 6 6,15::ATI:0
+
+# aux
+aux 0 0 6 1175 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 3 1 1300 2100 0 0
+aux 3 46 4 1700 2100 0 0
+aux 4 13 2 1300 2100 0 0
+
+# vtxtable
+vtxtable bands 1
+vtxtable channels 8
+vtxtable band 1 BAND-A   A CUSTOM  1080 1120 1160 1200 1240 1280 1320 1360
+vtxtable powerlevels 4
+vtxtable powervalues 25 400 800 5000
+vtxtable powerlabels 25 400 800 5W
+
+# vtx
+vtx 0 7 0 0 1 900 1100
+vtx 1 7 0 0 3 1400 1600
+vtx 2 7 0 0 4 1900 2100
+
+# rxfail
+rxfail 5 s 1500
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 400
+set dyn_notch_count = 2
+set dyn_notch_min_hz = 70
+set dyn_notch_max_hz = 800
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 14,27,14,1
+set rc_smoothing_auto_factor = 45
+set rc_smoothing_auto_factor_throttle = 45
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set failsafe_delay = 10
+set failsafe_switch_mode = STAGE2
+set failsafe_procedure = GPS-RESCUE
+set failsafe_recovery_delay = 10
+set bat_capacity = 10000
+set vbat_max_cell_voltage = 420
+set vbat_min_cell_voltage = 300
+set vbat_warning_cell_voltage = 250
+set small_angle = 180
+set gps_rescue_alt_mode = CURRENT_ALT
+set gps_rescue_initial_climb = 50
+set gps_rescue_return_alt = 40
+set gps_rescue_disarm_threshold = 20
+set gps_rescue_min_sats = 6
+set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 80
+set osd_warn_bitmask = 16383
+set osd_vbat_pos = 322
+set osd_rssi_pos = 2327
+set osd_link_tx_power_pos = 2178
+set osd_tim_2_pos = 2389
+set osd_flymode_pos = 2169
+set osd_throttle_pos = 2242
+set osd_vtx_channel_pos = 18531
+set osd_current_pos = 2337
+set osd_gps_speed_pos = 2219
+set osd_gps_lon_pos = 2049
+set osd_gps_lat_pos = 2081
+set osd_gps_sats_pos = 2105
+set osd_home_dir_pos = 2262
+set osd_home_dist_pos = 2263
+set osd_flight_dist_pos = 2295
+set osd_altitude_pos = 18571
+set osd_avg_cell_voltage_pos = 2305
+set osd_stat_bitmask = 276268
+set vtx_band = 1
+set vtx_channel = 6
+set vtx_power = 3
+set vtx_freq = 1280
+set vcd_video_system = NTSC
+set displayport_msp_fonts = 0,0,0,0
+set gyro_2_bustype = SPI
+set gyro_2_sensor_align = CW0
+set rpm_filter_q = 700
+set rpm_filter_min_hz = 70
+set craft_name = MARK4_7
+set altitude_source = GPS_ONLY
+set hover_throttle = 1400
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+set dterm_lpf1_static_hz = 105
+set dterm_lpf2_static_hz = 210
+set anti_gravity_gain = 120
+set iterm_windup = 85
+set d_pitch = 46
+set d_roll = 40
+set launch_control_mode = NORMAL
+set feedforward_transition = 30
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 35
+set feedforward_jitter_factor = 4
+set feedforward_boost = 18
+set simplified_pids_mode = OFF
+set simplified_master_multiplier = 140
+set simplified_d_gain = 115
+set simplified_pi_gain = 110
+set simplified_pitch_d_gain = 115
+set simplified_pitch_pi_gain = 110
+set simplified_dterm_filter_multiplier = 140
+set ez_landing_limit = 5
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 2
+set pitch_rc_rate = 2
+set yaw_rc_rate = 2
+set roll_expo = 40
+set pitch_expo = 40
+set yaw_expo = 40
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 60
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
