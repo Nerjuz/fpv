@@ -1237,7 +1237,7 @@ set ez_landing_limit = 15
 set ez_landing_speed = 50
 
 # restore original profile selection
-profile 1
+profile 0
 
 rateprofile 0
 
