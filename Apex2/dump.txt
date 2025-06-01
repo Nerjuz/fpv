@@ -230,8 +230,8 @@ beeper -CAM_CONNECTION_CLOSE
 beeper -RC_SMOOTHING_INIT_FAIL
 
 # beacon
-beacon -RX_LOST
-beacon -RX_SET
+beacon RX_LOST
+beacon RX_SET
 
 # map
 map AETR1234
@@ -240,10 +240,10 @@ map AETR1234
 aux 0 0 0 1700 2100 0 0
 aux 1 1 2 1700 2100 0 0
 aux 2 2 2 1300 1700 0 0
-aux 3 27 1 1700 2100 0 0
-aux 4 13 3 1300 1700 0 0
-aux 5 28 2 900 1700 0 0
-aux 6 35 3 1700 2100 0 0
+aux 3 13 3 1300 1700 0 0
+aux 4 13 1 1700 2100 0 0
+aux 5 35 3 1700 2100 0 0
+aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -364,7 +364,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 12,25,25,1
+set acc_calibration = -14,44,10,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -373,7 +373,7 @@ set mag_bustype = I2C
 set mag_i2c_device = 2
 set mag_i2c_address = 0
 set mag_spi_device = 0
-set mag_hardware = AUTO
+set mag_hardware = NONE
 set mag_calibration = 0,0,0
 set baro_bustype = I2C
 set baro_spi_device = 0
@@ -459,10 +459,10 @@ set align_board_roll = 0
 set align_board_pitch = 0
 set align_board_yaw = -45
 set bat_capacity = 0
-set vbat_max_cell_voltage = 430
+set vbat_max_cell_voltage = 435
 set vbat_full_cell_voltage = 410
 set vbat_min_cell_voltage = 330
-set vbat_warning_cell_voltage = 350
+set vbat_warning_cell_voltage = 340
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -503,7 +503,7 @@ set reboot_character = 82
 set serial_update_rate_hz = 100
 set imu_dcm_kp = 2500
 set imu_dcm_ki = 0
-set small_angle = 25
+set small_angle = 180
 set imu_process_denom = 2
 set mag_declination = 0
 set auto_disarm_delay = 5
@@ -588,7 +588,7 @@ set osd_units = METRIC
 set osd_warn_bitmask = 270335
 set osd_rssi_alarm = 20
 set osd_link_quality_alarm = 95
-set osd_rssi_dbm_alarm = -95
+set osd_rssi_dbm_alarm = -100
 set osd_rsnr_alarm = 4
 set osd_cap_alarm = 740
 set osd_alt_alarm = 120
@@ -976,7 +976,7 @@ set feedforward_smooth_factor = 25
 set feedforward_jitter_factor = 7
 set feedforward_boost = 15
 set feedforward_max_rate_limit = 90
-set dyn_idle_min_rpm = 35
+set dyn_idle_min_rpm = 0
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
@@ -1237,7 +1237,7 @@ set ez_landing_limit = 15
 set ez_landing_speed = 50
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
