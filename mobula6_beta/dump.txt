@@ -374,11 +374,11 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 1 2 1700 2100 0 0
+aux 2 2 2 1300 1700 0 0
+aux 3 13 3 1300 1700 0 0
+aux 4 35 3 1700 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
@@ -621,7 +621,7 @@ set beeper_inversion = ON
 set beeper_od = OFF
 set beeper_frequency = 0
 set beeper_dshot_beacon_tone = 1
-set yaw_motors_reversed = OFF
+set yaw_motors_reversed = ON
 set mixer_type = LEGACY
 set crashflip_motor_percent = 0
 set crashflip_expo = 35
@@ -747,11 +747,11 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2433
+set osd_vbat_pos = 2409
 set osd_rssi_pos = 341
-set osd_link_quality_pos = 2369
+set osd_link_quality_pos = 2063
 set osd_link_tx_power_pos = 341
-set osd_rssi_dbm_pos = 2337
+set osd_rssi_dbm_pos = 2057
 set osd_rsnr_pos = 341
 set osd_tim_1_pos = 341
 set osd_tim_2_pos = 341
@@ -759,14 +759,14 @@ set osd_remaining_time_estimate_pos = 341
 set osd_flymode_pos = 341
 set osd_anti_gravity_pos = 341
 set osd_g_force_pos = 341
-set osd_throttle_pos = 341
+set osd_throttle_pos = 2416
 set osd_vtx_channel_pos = 341
 set osd_crosshairs_pos = 312
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 185
-set osd_current_pos = 2400
+set osd_current_pos = 2447
 set osd_mah_drawn_pos = 341
-set osd_wh_drawn_pos = 341
+set osd_wh_drawn_pos = 2440
 set osd_motor_diag_pos = 341
 set osd_craft_name_pos = 341
 set osd_pilot_name_pos = 341
@@ -785,7 +785,7 @@ set osd_pid_yaw_pos = 341
 set osd_debug_pos = 341
 set osd_power_pos = 341
 set osd_pidrate_profile_pos = 341
-set osd_warnings_pos = 14666
+set osd_warnings_pos = 14538
 set osd_avg_cell_voltage_pos = 341
 set osd_pit_ang_pos = 341
 set osd_rol_ang_pos = 341
@@ -842,7 +842,7 @@ set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
 set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_height = 16
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 0
 set task_statistics = ON
@@ -859,7 +859,7 @@ set vtx_softserial_alt = OFF
 set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vcd_video_system = AUTO
+set vcd_video_system = PAL
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
