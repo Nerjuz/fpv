@@ -227,9 +227,9 @@ feature ANTI_GRAVITY
 serial 20 1 115200 57600 0 115200
 serial 0 131073 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
-serial 2 0 115200 57600 0 115200
+serial 2 2 115200 57600 0 115200
 serial 3 0 115200 57600 0 115200
-serial 5 2 115200 57600 0 115200
+serial 5 0 115200 57600 0 115200
 
 # mixer
 mixer QUADX
@@ -274,8 +274,8 @@ map RETA1234
 aux 0 0 0 1700 2100 0 0
 aux 1 1 3 1700 2100 0 0
 aux 2 2 3 1300 1700 0 0
-aux 3 13 2 1300 2100 0 0
-aux 4 35 1 1600 2100 0 0
+aux 3 13 2 1700 2100 0 0
+aux 4 35 1 1700 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
@@ -353,9 +353,9 @@ rxfail 17 h
 # master
 set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
-set gyro_lpf1_static_hz = 500
+set gyro_lpf1_static_hz = 250
 set gyro_lpf2_type = PT1
-set gyro_lpf2_static_hz = 1000
+set gyro_lpf2_static_hz = 500
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -367,19 +367,19 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = SECOND
-set dyn_notch_count = 2
-set dyn_notch_q = 500
-set dyn_notch_min_hz = 120
+set dyn_notch_count = 3
+set dyn_notch_q = 300
+set dyn_notch_min_hz = 100
 set dyn_notch_max_hz = 600
-set gyro_lpf1_dyn_min_hz = 500
-set gyro_lpf1_dyn_max_hz = 1000
+set gyro_lpf1_dyn_min_hz = 250
+set gyro_lpf1_dyn_max_hz = 500
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 25
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 167,21,7,1
+set acc_calibration = 62,-10,36,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -451,7 +451,7 @@ set min_command = 1000
 set motor_kv = 1960
 set dshot_idle_value = 550
 set dshot_burst = ON
-set dshot_bidir = ON
+set dshot_bidir = OFF
 set dshot_edt = OFF
 set dshot_bitbang = AUTO
 set dshot_bitbang_timer = AUTO
@@ -465,7 +465,7 @@ set thr_corr_value = 0
 set thr_corr_angle = 800
 set failsafe_delay = 15
 set failsafe_off_delay = 10
-set failsafe_throttle = 1200
+set failsafe_throttle = 1150
 set failsafe_switch_mode = STAGE1
 set failsafe_throttle_low_delay = 100
 set failsafe_procedure = AUTO-LAND
@@ -475,9 +475,9 @@ set align_board_roll = 0
 set align_board_pitch = 0
 set align_board_yaw = 0
 set bat_capacity = 0
-set vbat_max_cell_voltage = 430
+set vbat_max_cell_voltage = 435
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 330
+set vbat_min_cell_voltage = 340
 set vbat_warning_cell_voltage = 350
 set vbat_hysteresis = 1
 set current_meter = ADC
@@ -525,7 +525,7 @@ set mag_declination = 0
 set auto_disarm_delay = 5
 set gyro_cal_on_first_arm = OFF
 set gps_provider = UBLOX
-set gps_sbas_mode = NONE
+set gps_sbas_mode = EGNOS
 set gps_auto_config = ON
 set gps_auto_baud = OFF
 set gps_ublox_acquire_model = STATIONARY
@@ -573,7 +573,7 @@ set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
 set simplified_gyro_filter = ON
-set simplified_gyro_filter_multiplier = 200
+set simplified_gyro_filter_multiplier = 100
 set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set hott_alarm_int = 5
@@ -777,7 +777,7 @@ set rpm_filter_harmonics = 3
 set rpm_filter_weights = 100,100,100
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 100
-set rpm_filter_fade_range_hz = 100
+set rpm_filter_fade_range_hz = 50
 set rpm_filter_lpf_hz = 150
 set stats_min_armed_time_s = -1
 set stats_total_flights = 0
@@ -800,7 +800,7 @@ profile 0
 set profile_name = -
 set dterm_lpf1_dyn_min_hz = 75
 set dterm_lpf1_dyn_max_hz = 150
-set dterm_lpf1_dyn_expo = 10
+set dterm_lpf1_dyn_expo = 5
 set dterm_lpf1_type = PT1
 set dterm_lpf1_static_hz = 75
 set dterm_lpf2_type = PT1
@@ -834,14 +834,14 @@ set pidsum_limit_yaw = 400
 set yaw_lowpass_hz = 100
 set throttle_boost = 5
 set throttle_boost_cutoff = 15
-set p_pitch = 59
-set i_pitch = 106
-set d_pitch = 58
-set f_pitch = 158
-set p_roll = 51
-set i_roll = 92
-set d_roll = 53
-set f_roll = 138
+set p_pitch = 47
+set i_pitch = 84
+set d_pitch = 46
+set f_pitch = 125
+set p_roll = 45
+set i_roll = 80
+set d_roll = 40
+set f_roll = 120
 set p_yaw = 45
 set i_yaw = 80
 set d_yaw = 0
@@ -862,8 +862,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 43
-set d_min_pitch = 46
+set d_min_roll = 30
+set d_min_pitch = 34
 set d_min_yaw = 0
 set d_max_gain = 37
 set d_max_advance = 20
@@ -889,15 +889,15 @@ set dyn_idle_d_gain = 50
 set dyn_idle_max_increase = 150
 set dyn_idle_start_increase = 50
 set level_race_mode = OFF
-set simplified_pids_mode = RP
+set simplified_pids_mode = RPY
 set simplified_master_multiplier = 100
 set simplified_i_gain = 100
-set simplified_d_gain = 145
-set simplified_pi_gain = 115
-set simplified_dmax_gain = 70
-set simplified_feedforward_gain = 115
-set simplified_pitch_d_gain = 95
-set simplified_pitch_pi_gain = 110
+set simplified_d_gain = 100
+set simplified_pi_gain = 100
+set simplified_dmax_gain = 100
+set simplified_feedforward_gain = 100
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
 set tpa_mode = D
@@ -907,7 +907,7 @@ set tpa_low_rate = 20
 set tpa_low_breakpoint = 1050
 set tpa_low_always = OFF
 set ez_landing_threshold = 25
-set ez_landing_limit = 5
+set ez_landing_limit = 15
 set ez_landing_speed = 50
 
 profile 1
