@@ -19,3 +19,7 @@ set report_cell_voltage = ON
 ```
 # TBD
 ```
+
+```
+set altitude_source = GPS_ONLY
+```
