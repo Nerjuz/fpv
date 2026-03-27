@@ -23,3 +23,8 @@ set report_cell_voltage = ON
 ```
 set altitude_source = GPS_ONLY
 ```
+
+# FC to controller recaver
+```
+set usb_hid_cdc = on
+```
